@@ -1,0 +1,139 @@
+/* General Container */
+.complaints-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* No Complaints */
+.no-complaints {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Complaints Grid */
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Complaint Card */
+.complaint-card {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.complaint-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.complaint-category {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Priority Badge */
+.priority-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.priority-badge.normal {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.priority-badge.high {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.priority-badge.critical {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* Complaint Details */
+.complaint-details p {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Complaint Description */
+.complaint-description {
+  margin-top: 16px;
+}
+
+.complaint-description h4 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.complaint-description p {
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Submitted Date */
+.submitted-date {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: #888;
+  text-align: right;
+}

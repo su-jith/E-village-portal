@@ -1,0 +1,84 @@
+.job-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.job-post-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.job-post-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.job-post-form input,
+.job-post-form textarea,
+.job-post-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.job-post-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.responsibility-item {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-btn,
+.remove-btn,
+.submit-btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn {
+  margin-top: 0.5rem;
+  background-color: #28a745;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.submit-btn {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}

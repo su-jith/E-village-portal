@@ -1,0 +1,156 @@
+/* Container */
+.house-management-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.house-management-container h2,
+.house-management-container h3 {
+  text-align: center;
+  color: #333;
+}
+
+.house-management-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Add House Form */
+.add-house-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.add-house-form input,
+.add-house-form select {
+  padding: 10px;
+  font-size: 14px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.add-house-form input:focus,
+.add-house-form select:focus {
+  border-color: #007bff;
+}
+
+/* Buttons */
+.add-house-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-house-form button:hover {
+  background-color: #0056b3;
+}
+
+.add-house-form button:nth-child(2) {
+  background-color: #6c757d;
+}
+
+.add-house-form button:nth-child(2):hover {
+  background-color: #5a6268;
+}
+
+/* Houses Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+table button {
+  padding: 6px 12px;
+  font-size: 13px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+table button:hover {
+  background-color: #218838;
+}
+
+table button:nth-child(2) {
+  background-color: #17a2b8;
+}
+
+table button:nth-child(2):hover {
+  background-color: #138496;
+}
+
+table td button:nth-child(2) {
+  margin-left: 10px;
+}
+
+table td button:nth-child(1):hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+table td button:nth-child(2):hover {
+  background-color: #dc3545;
+}
+
+/* Back to Dashboard Button */
+.house-management-container > button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  font-size: 15px;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.house-management-container > button:hover {
+  background-color: #23272b;
+}

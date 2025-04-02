@@ -1,0 +1,156 @@
+.admin-dashboard-ab12cd34 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  background: linear-gradient(240deg, #aaf7ed, #ffffff);
+  min-height: 100vh;
+  position: relative;
+}
+
+.dashboard-header-ab12cd34 {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.dashboard-header-ab12cd34 h1 {
+  font-size: 2.5rem;
+  color: #0b1d0c;
+  margin-bottom: 10px;
+}
+
+.dashboard-header-ab12cd34 p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Logout Button */
+.logout-button-ab12cd34 {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #34a7ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button-ab12cd34:hover {
+  background: #cc0000;
+}
+
+.cards-container-ab12cd34 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-ab12cd34 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(135deg, #ffffff, #9ef6d8);
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-ab12cd34:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu for User Management */
+.user-management-container {
+  position: relative;
+  width: 100%;
+}
+
+.user-management-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 200px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.user-management-container:hover .user-dropdown {
+  display: block;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.user-dropdown a:hover {
+  background: #9ef6d8;
+  color: #000;
+}
+
+/* Adding Icons */
+.card-ab12cd34::before {
+  content: "📊"; /* Default icon */
+  font-size: 3rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Assign specific icons */
+.card-ab12cd34:nth-child(1)::before { content: "📊"; } /* Dashboard Overview */
+.card-ab12cd34:nth-child(2)::before { content: "🗺️"; } /* Assign Ward */
+.card-ab12cd34:nth-child(3)::before { content: "🏘️"; } /* Ward Management */
+.card-ab12cd34:nth-child(4)::before { content: "🏥"; } /* Healthcare Workers */
+.card-ab12cd34:nth-child(5)::before { content: "💼"; } /* Job Portal */
+.card-ab12cd34:nth-child(6)::before { content: "🔔"; } /* Notifications */
+.card-ab12cd34:nth-child(7)::before { content: "📢"; } /* Complaints & Feedback */
+
+/* Icons for User Management Dropdown */
+.user-dropdown a:nth-child(1)::before { content: "👨‍💼"; margin-right: 8px; } /* Employee Management */
+.user-dropdown a:nth-child(2)::before { content: "👨‍👩‍👧‍👦"; margin-right: 8px; } /* Family Management */
+.user-dropdown a:nth-child(3)::before { content: "🏠"; margin-right: 8px; } /* House Management */
+.user-dropdown a:nth-child(4)::before { content: "🍚"; margin-right: 8px; } /* Ration Officer Management */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container-ab12cd34 {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .logout-button-ab12cd34 {
+    position: sticky;
+    display: flex;
+    margin: 10px auto;
+    width: 50%;
+  }
+
+  .user-dropdown {
+    left: 0;
+    transform: none;
+  }
+}

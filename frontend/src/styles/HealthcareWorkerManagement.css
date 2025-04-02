@@ -1,0 +1,5 @@
+.healthcare-management { padding: 20px; }
+form input, button { margin: 5px; padding: 10px; }
+table { width: 100%; margin-top: 20px; }
+th, td { padding: 10px; text-align: left; }
+button { cursor: pointer; }

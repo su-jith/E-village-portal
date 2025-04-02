@@ -1,0 +1,110 @@
+/* AdminLogin.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f8fa;
+  color: #333;
+}
+
+/* Container for the Login Page */
+.login-container-9x8b2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Navbar */
+.navbar-9x8b2 {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.nav-button-9x8b2 {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.nav-button-9x8b2:hover {
+  color: #0056b3;
+}
+
+/* Login Card */
+.login-card-9x8b2 {
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-card-9x8b2 h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Error Message */
+.error-9x8b2 {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.login-card-9x8b2 form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card-9x8b2 label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-card-9x8b2 input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-card-9x8b2 input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-card-9x8b2 button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-card-9x8b2 button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}

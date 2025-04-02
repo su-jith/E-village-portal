@@ -1,0 +1,108 @@
+.assign-ward-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.assign-ward-container h2 {
+  text-align: center;
+  color: #2f855a;
+  margin-bottom: 20px;
+}
+
+.assign-ward-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.assign-ward-form label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.assign-ward-form input,
+.assign-ward-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #2f855a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #276749;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #e53e3e;
+}
+
+/* Table Styles */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.employee-table th {
+  background-color: #2f855a;
+  color: #fff;
+}
+
+.employee-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #2f855a;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #276749;
+}
+
+.action-btn.delete {
+  background-color: #e53e3e;
+}
+
+.action-btn.delete:hover {
+  background-color: #c53030;
+}

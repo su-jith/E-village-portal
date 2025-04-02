@@ -1,0 +1,87 @@
+/* FamilyDataCollectionA1B2C3.css */
+
+.fdc-container-A1B2C3 {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fdc-title-A1B2C3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.fdc-info-A1B2C3 {
+  margin-bottom: 20px;
+}
+
+.fdc-label-A1B2C3 {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.fdc-input-A1B2C3,
+.fdc-select-A1B2C3 {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.fdc-input-disabled-A1B2C3 {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #777;
+}
+
+.fdc-form-A1B2C3 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fdc-button-A1B2C3 {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.fdc-button-A1B2C3:hover {
+  background-color: #0056b3;
+}
+
+.fdc-back-button-A1B2C3 {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.fdc-back-button-A1B2C3:hover {
+  background-color: #e0e0e0;
+}

@@ -1,0 +1,230 @@
+/* FamilyDashboard.css */
+
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-heading {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dashboard-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.button-container {
+  margin-top: 20px;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Cards Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.card-container div {
+  width: 220px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.complaints-card button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.complaints-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Family Members Table */
+.family-members-section,
+.jobs-section,
+.ration-notifications-section {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.family-members-heading,
+.jobs-heading,
+.ration-notifications-heading {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.family-members-table,
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.family-members-table th,
+.jobs-table th {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.family-members-table td,
+.jobs-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.family-members-table tr:nth-child(even),
+.jobs-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.view-details-button,
+.apply-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover,
+.apply-button:hover {
+  background-color: #218838;
+}
+
+/* Ration Notifications */
+.ration-card {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.single-notification {
+  margin-bottom: 20px;
+}
+
+.single-notification h5 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.single-notification ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.single-notification ul li {
+  margin-bottom: 5px;
+}
+
+.single-card {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container,
+  .card-container,
+  .family-members-section,
+  .jobs-section,
+  .ration-notifications-section {
+    padding: 15px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container div {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .family-members-table,
+  .jobs-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,113 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* space between dashboard and complaint card */
+  padding: 40px 20px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* Main Dashboard Styles */
+.dashboard-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ward-details {
+  background-color: #f9fafb;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ward-details h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.ward-details button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ward-details button:hover {
+  background-color: #1e40af;
+}
+
+/* Complaints & Feedback Card */
+.complaints-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.complaints-card h3 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.complaints-card p {
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.complaints-card button {
+  padding: 12px 25px;
+  background-color: #f59e0b;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.complaints-card button:hover {
+  background-color: #d97706;
+}
+
+/* To push it outside visually */
+.outside-card {
+  margin-top: 0; /* reset margin if any */
+}
+
+/* Logout Button */
+.logout-btn {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 12px 25px;
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c;
+}

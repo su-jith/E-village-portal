@@ -1,0 +1,153 @@
+.ward-management-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f0fff1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ward-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #010000;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #b0d8c6;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #0adc57;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.cancel-btn {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.cancel-btn:hover {
+  background-color: #b02a37;
+}
+
+.message {
+  text-align: center;
+  font-size: 14px;
+  color: #28a745;
+  margin-top: 10px;
+}
+
+.ward-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.ward-table th, .ward-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.ward-table th {
+  background-color: #31e352;
+  color: #333;
+  font-weight: bold;
+}
+
+.ward-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-right: 5px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .ward-management-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .ward-table th, .ward-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}

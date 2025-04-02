@@ -1,0 +1,62 @@
+/* House Management Container */
+.house-management-abc123 {
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+  background: linear-gradient(240deg, #f3f3f3, #ffffff);
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header Section */
+.house-header-abc123 h1 {
+  font-size: 2.5rem;
+  color: #0b1d0c;
+  margin-bottom: 10px;
+}
+
+.house-header-abc123 p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Loading & Error Messages */
+.loading-abc123, .error-abc123 {
+  font-size: 1.2rem;
+  color: red;
+}
+
+/* Table Styling */
+.house-table-abc123 {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.house-table-abc123 th, .house-table-abc123 td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.house-table-abc123 th {
+  background-color: #34a7ff;
+  color: white;
+  font-weight: bold;
+}
+
+.house-table-abc123 tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .house-table-abc123 {
+    font-size: 0.9rem;
+  }
+}
