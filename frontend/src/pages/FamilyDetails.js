@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/FamilyDetails.css';
 
 const FamilyDetails = () => {
-  const { houseNumber } = useParams();
+  const { houseNumber, wardNumber } = useParams();
   const navigate = useNavigate();
 
   const [familyMembers, setFamilyMembers] = useState([]);
@@ -14,9 +14,9 @@ const FamilyDetails = () => {
   const fetchFamilyMembers = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/employee/family/${houseNumber}`);
+      const res = await fetch(`http://localhost:5000/api/employee/family/${wardNumber}/${houseNumber}`);
       const data = await res.json();
-
+      console.log('Fetched family members:', data); // Debugging line
       if (res.ok) {
         setFamilyMembers(data);
       } else {
@@ -28,7 +28,7 @@ const FamilyDetails = () => {
       setLoading(false);
     }
   };
-
+  
   useEffect(() => {
     if (houseNumber) {
       fetchFamilyMembers();

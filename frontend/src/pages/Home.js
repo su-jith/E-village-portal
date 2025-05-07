@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
-import image from "../images/home_back.jpg";
+// import image from "../images/home_back.jpg";
+import gif from "../images/adm.gif";
 
 function Home() {
   // State for dropdown menu visibility
@@ -23,15 +24,13 @@ function Home() {
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
+          <li class="nav-item">
+            <a href="#about" class="custom-link">About</a>
           </li>
+
+
           <li className="nav-item">
-            <Link to="/features" className="nav-link">
-              Features
-            </Link>
+           <a href="#about" class="custom-link">Features</a>
           </li>
         </ul>
         <div className="login-section">
@@ -103,7 +102,7 @@ function Home() {
 
         <div className="hero-image">
           {/* Replace with actual image or illustration */}
-          <img src={image} alt="Village Portal Illustration" />
+          <img src={gif} alt="Village Portal Illustration" />
         </div>
       </main>
 
@@ -141,7 +140,7 @@ function Home() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="container">
+        <div id="about" className="container">
           <p>&copy; {new Date().getFullYear()} e-Village Portal. All rights reserved.</p>
         </div>
       </footer>

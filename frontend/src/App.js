@@ -81,10 +81,11 @@ function App() {
         
         <Route path="/employee/collect-data" element={<HouseManagement />} />
         <Route path="/employee/house-management" element={<HouseManagement />} />
-        <Route path="/employee/family/add/:houseNumber" element={<FamilyDataCollection />} />
+        <Route path="/employee/family/add/:wardNumber/:houseNumber" element={<FamilyDataCollection />} />
         <Route path="/employee/family/edit/:houseNumber/:familyMemberId" element={<FamilyDataCollection />} />
 
-        <Route path="/employee/family-details/:houseNumber" element={<FamilyDetails />} />
+        <Route path="/employee/family-details/:wardNumber/:houseNumber" element={<FamilyDetails />} />
+
         <Route path="/healthcareworker-dashboard" element={<HealthcareWorkerDashboard />}/>
         <Route path="/health-data-collection" element={<HealthDataCollection />}/>
         <Route path="/family-member-details/:memberId" element={<HealthFaamilyMemberDetails />} />

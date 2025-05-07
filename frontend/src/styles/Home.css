@@ -24,7 +24,7 @@ html {
 
 /* Homepage Wrapper */
 .homepage {
-  background-color: linear-gradient(135deg, #d0ddd0, #000C40);
+  
   overflow-x: hidden;
   
 }
@@ -37,7 +37,7 @@ html {
   justify-content: space-between;
   padding: 1rem 0;
   border-bottom: 1px solid #ffffff;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -159,7 +159,7 @@ html {
   background-color: #007bff;
   color: #fff;
   border: none;
-  width: 150px;
+  width: 200px;
   /* margin: 10px; */
 }
 
@@ -315,4 +315,16 @@ html {
   color: #777;
   margin-top: 2rem;
   animation: fadeInUp 0.8s ease-out;
+}
+.custom-link {
+  text-decoration: none;       /* Removes underline */
+  color: inherit;              /* Keeps the same color as parent */
+}
+
+.custom-link:visited,
+.custom-link:hover,
+.custom-link:active,
+.custom-link:focus {
+  text-decoration: none;       /* Prevents underline on all states */
+  color: inherit;              /* Prevents color change on all states */
 }

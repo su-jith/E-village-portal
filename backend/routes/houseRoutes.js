@@ -4,6 +4,23 @@ const House = require('../models/House');
 const Ward = require('../models/Ward'); // Assuming Ward schema exists
 const Family = require('../models/Family');
 
+
+
+router.get("/houses/all", async (req, res) => {
+  try {
+    console.log("Calling /houses/all...");
+    const houses = await House.find();
+    console.log("Houses found:", houses.length);
+    res.json(houses);
+  } catch (error) {
+    console.error("Error in /houses/all:", error.message);
+    res.status(500).json({ message: "Failed to fetch houses", error: error.message });
+  }
+});
+
+
+
+
 // GET all houses for a ward
 router.get('/houses/:wardNumber', async (req, res) => {
   try {
@@ -172,14 +189,7 @@ router.get('/family-members/count/:houseNumber', async (req, res) => {
 });
 
 
-router.get("/overview/houses", async (req, res) => {
-  try {
-    const houses = await House.find(); // Fetch data from MongoDB
-    res.json(houses);
-  } catch (error) {
-    res.status(500).json({ message: "Failed to fetch houses" });
-  }
-});
+
 
 
 

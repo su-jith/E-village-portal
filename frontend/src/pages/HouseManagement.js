@@ -230,11 +230,11 @@ const HouseManagement = () => {
 
   // ✅ MODIFIED to pass houseNumber and wardNumber
   const handleAddMembers = (house) => {
-    navigate(`/employee/family/add/${house.houseNumber}`);
+    navigate(`/employee/family/add/${house.wardNumber}/${house.houseNumber}`);
   };
 
   const handleViewMembers = (house) => {
-    navigate(`/employee/family-details/${house.houseNumber}`);
+    navigate(`/employee/family-details/${house.wardNumber}/${house.houseNumber}`);
   };
 
   return (

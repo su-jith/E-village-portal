@@ -5,13 +5,14 @@ import '../styles/FamilyDataCollection.css';
 const FamilyDataCollectionA1B2C3 = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { houseNumber, familyMemberId } = useParams(); // Added familyMemberId for update case
+  const { wardNumber, houseNumber, familyMemberId } = useParams();
+ // Added familyMemberId for update case
   
   console.log('Params:', useParams());
   console.log('houseNumber:', houseNumber);
   console.log('familyMemberId:', familyMemberId);
 
-  const [wardNumber, setWardNumber] = useState('');
+
   const [houseInfo, setHouseInfo] = useState({
     rationEntitlement: '',
     landOwnership: '',
@@ -52,7 +53,7 @@ const FamilyDataCollectionA1B2C3 = () => {
             landOwnership: data[0].landOwnership,
             houseType: data[0].houseType
           });
-          setWardNumber(data[0].wardNumber);
+          
         } else {
           alert(data.message || 'Failed to fetch house details.');
         }

@@ -45,14 +45,14 @@ router.get('/check/:memberId', async (req, res) => {
 router.get('/member/:id', async (req, res) => {
   try {
     const memberId = req.params.id;
-
+    console.log("helloooooo",memberId)
     // Validate ObjectId format (optional but recommended)
-    if (!mongoose.Types.ObjectId.isValid(memberId)) {
-      return res.status(400).json({ message: 'Invalid member ID' });
-    }
-    console.log(memberId)
+    const searchid = new mongoose.Types.ObjectId(memberId);
+    console.log("searchid",searchid);
+    
     // Find the family member by _id
-    const member = await FamilyHealth.find( {familyMemberId:memberId} );
+    const member = await FamilyHealth.find( {familyMemberId:searchid} );
+    console.log("member",member)
 
     if (!member) {
       return res.status(404).json({ message: 'Family member not found' });

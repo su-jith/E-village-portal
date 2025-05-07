@@ -241,4 +241,24 @@ router.put("/update/:memberId", async (req, res) => {
 
 
 
+router.get('/:wardNumber/:houseNumber', async (req, res) => {
+  const { wardNumber, houseNumber } = req.params;
+
+  try {
+    const members = await Family.find({
+      wardNumber: parseInt(wardNumber),
+      houseNumber: parseInt(houseNumber)
+    });
+
+
+    res.status(200).json(members);
+    console.log('Fetched family members:', members); // Debugging line
+  } catch (error) {
+    console.error('Error fetching family members:', error);
+    res.status(500).json({ message: 'Server error fetching family members', error });
+  }
+});
+
+
+
 module.exports = router;

@@ -17,9 +17,9 @@ const FamilyFullDetails = () => {
         const familyRes = await axios.get(`http://localhost:5000/api/employee/family/member/${memberId}`);
         setFamilyDetails(familyRes.data);
 
-        const healthRes = await axios.get(`http://localhost:5000/api/healthcare-worker/healthdata/full-details/member/${memberId}`);
-        setHealthDetails(healthRes.data);
-      
+        const healthRes = await axios.get(`http://localhost:5000/api/healthcare-worker/healthdata/member/${memberId}`);
+        setHealthDetails(healthRes.data[0]);
+       
 
       } catch (error) {
         console.error('Error fetching details:', error);
