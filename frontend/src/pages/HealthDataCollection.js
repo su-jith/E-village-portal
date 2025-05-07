@@ -84,7 +84,7 @@ const HealthDataCollection = () => {
   const handleViewFamilyMembers = async (house) => {
     setSelectedHouse(house);
     try {
-      const res = await fetch(`http://localhost:5000/api/employee/family/${house.houseNumber}`);
+      const res = await fetch(`http://localhost:5000/api/employee/family/${house.houseNumber}/${house.wardNumber}`);
       const data = await res.json();
 
       if (res.ok) {

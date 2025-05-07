@@ -10,13 +10,15 @@ const FamilyDataCollectionA1B2C3 = () => {
   
   console.log('Params:', useParams());
   console.log('houseNumber:', houseNumber);
+  console.log('wardNumber:', wardNumber);
   console.log('familyMemberId:', familyMemberId);
 
 
   const [houseInfo, setHouseInfo] = useState({
     rationEntitlement: '',
     landOwnership: '',
-    houseType: ''
+    houseType: '',
+    wardNumber: ''
   });
 
   const [formData, setFormData] = useState({
@@ -51,7 +53,8 @@ const FamilyDataCollectionA1B2C3 = () => {
           setHouseInfo({
             rationEntitlement: data[0].rationEntitlement,
             landOwnership: data[0].landOwnership,
-            houseType: data[0].houseType
+            houseType: data[0].houseType,
+            wardNumber: parseInt(wardNumber)  // Set ward number here
           });
           
         } else {
@@ -75,7 +78,9 @@ const FamilyDataCollectionA1B2C3 = () => {
         const data = await res.json();
 
         if (res.ok && data) {
+          console.log("Fetched house details:", data[0]); // ✅ Add this
           setFormData({
+            
             memberName: data.memberName,
             dob: data.dob,
             age: calculateAge(data.dob),
@@ -133,8 +138,9 @@ const FamilyDataCollectionA1B2C3 = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Final houseInfo before submit:", houseInfo);
 
-    if (!houseNumber || !wardNumber) {
+    if (!houseNumber || !houseInfo.wardNumber) {
       alert('Missing house or ward number!');
       return;
     }
@@ -155,7 +161,7 @@ const FamilyDataCollectionA1B2C3 = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           houseNumber,
-          wardNumber,
+          wardNumber: houseInfo.wardNumber,
           rationEntitlement: houseInfo.rationEntitlement,
           landOwnership: houseInfo.landOwnership,
           houseType: houseInfo.houseType,

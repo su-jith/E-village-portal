@@ -82,6 +82,8 @@ router.post('/add', async (req, res) => {
     const { houseNumber, memberName, dob, ...rest } = req.body;
 
     console.log('Received data:', req.body);
+    console.log('Received wardNumber from frontend:', req.body.wardNumber);
+
 
     if (!houseNumber) {
       return res.status(400).json({ message: 'House number is required' });
@@ -93,7 +95,8 @@ router.post('/add', async (req, res) => {
       return res.status(404).json({ message: 'House not found for house number: ' + houseNumber });
     }
 
-    const wardNumber = house.wardNumber;
+    const wardNumber = req.body.wardNumber || house.wardNumber;
+
     console.log(`Auto-assigned Ward Number: ${wardNumber} for House Number: ${houseNumber}`);
 
     if (!memberName || memberName.trim() === '') {
@@ -168,6 +171,26 @@ router.get('/:houseNumber', async (req, res) => {
     res.status(500).json({ message: 'Server error.' });
   }
 });
+
+
+
+// Fetch family members by houseNumber and wardNumber
+router.get('/:houseNumber/:wardNumber', async (req, res) => {
+  try {
+    const { houseNumber, wardNumber } = req.params;
+
+    const members = await Family.find({
+      houseNumber: parseInt(houseNumber),
+      wardNumber: parseInt(wardNumber)
+    });
+
+    res.json(members);
+  } catch (error) {
+    console.error('Error fetching members:', error);
+    res.status(500).json({ message: 'Server error.' });
+  }
+});
+
 
 // Get a single family member by their _id
 router.get('/member/:id', async (req, res) => {
