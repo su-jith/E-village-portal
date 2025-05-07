@@ -203,7 +203,9 @@ router.get('/member/:id', async (req, res) => {
     }
     console.log(memberId)
     // Find the family member by _id
-    const member = await Family.findById( memberId );
+    // const member = await Family.findById( memberId );
+    const member = await Family.findOne({ _id: memberId });
+
 
     if (!member) {
       return res.status(404).json({ message: 'Family member not found' });
